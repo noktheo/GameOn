@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Reservation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style/modal.css" />
+  
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <div class="header-logo">
+      <img alt="logo" src="media/Logo.png" width="auto" height="auto" />
+    </div>
+    <div class="main-navbar">
+
+      <a href="#" class="active"><span>Accueil</span></a>
+      <a href="#"><span>Détails de l'évènement</span></a>
+      <a href="#"><span>À propos</span></a>
+      <a href="#"><span>Contact</span></a>
+      <a href="#"><span>Évènements passés</span></a>
+      <a href="javascript:void(0);" class="icon" onclick="editNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  </div>
+  <main>
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-headline">
+          Marathon national<br>
+          de jeux vidéos
+        </h1>
+        <p class="hero-text">
+          Vous aimez jouer ? Notre prochain évènement gaming est ouvert
+          aux réservations... Places limitées !
+        </p>
+        <button class="btn-signup modal-btn">
+          je m'inscris
+        </button>
+      </div>
+      <div class="hero-img">
+        <img src="media/bg_img.jpg" alt="img" />
+      </div>
+      <button class="btn-signup modal-btn">
+        je m'inscris
+      </button>
+    </div>
+
+    <div class="bground">
+      <div class="content">
+        <span class="close"></span>
+        <div class="modal-body">
+
+          <form class="formControl" id="FormLogin">
+
+            <div class="formData">
+              <label for="userName">Prénom</label>
+              <input class="text-control" type="text" name="userName" id='userName'>
+              </br>
+              <span id='error'></span>
+            </div>
+
+            <div class="formData">
+              <label for="lastName">Nom</label>
+              <input class="text-control" type="text" name="lastName" id='lastName'>
+              </br>
+              <span id='error'></span>
+            </div>
+
+            <div class="formData">
+              <label for="mail">Email</label>
+              <input class="text-control" type="email" name="mail" id='mail'>
+              </br>
+              <span id='error'></span>
+            </div>
+
+            <div class="form-control ">
+              <label for="date">Date de naissance</label>
+              <input class="text-control" type="date" name="date" id='date' max="2023-01-01">
+              </br>
+              <span id='error'></span>
+
+            </div>
+
+            <div class="form-control ">
+              <label for="numberT">Combien de tournois ?</label>
+              <input class="text-control" type="number" name="numberT" id='numberT' value="0">
+              </br>
+              <span id='error'></span>
+            </div>
+
+            <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
+
+            <div>
+              <input type="radio" id="Tournoi" name="Tournoi" value="NewYork" checked>
+              <label for="Tournoi">New York</label>
+            </div>
+
+            <div>
+              <input type="radio" id="Tournoi" name="Tournoi" value="San francisco">
+              <label for="Tournoi">San francisco</label>
+            </div>
+
+            <div>
+              <input type="radio" id="Tournoi" name="Tournoi" value="Seattle">
+              <label for="Tournoi">Seattle</label>
+            </div>
+
+            <div>
+              <input class="checkbox-input" type="checkbox" id="condition" checked>
+              <label class="checkbox2-label" for="condition">
+                <div class="checkbox-icon"  id='test'></div>
+                J'ai lu et accepté les conditions d'utilisation.
+              </label>
+              <span id='error'></span>
+            </div>
+
+            <div>
+              <input class="checkbox-input" type="checkbox" id="event">
+              <label class="checkbox2-label" for="event">
+                <div class="checkbox-icon"></div>
+                Je souhaite être prévenu des prochains évènements.
+              </label>
+              <span id='error'></span>
+            </div>
+
+            <button class="btn-submit button" type="submit">Valider</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p class="copyrights">
+      Copyright 2014 - 2022, GameOn Inc.
+    </p>
+  </footer>
+  <script src="script/verifySignUp.js" async></script>
+  <script src="script/modal.js"></script>
+</body>
+
+</html>
