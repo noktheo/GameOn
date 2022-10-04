@@ -35,6 +35,9 @@ img {
 
 .topnav {
   overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   margin: 3.5%;
 }
 .header-logo {
@@ -444,15 +447,15 @@ input {
   margin: 0;
   margin-top: 59px;
 }
-.hero-img {
-  grid-column: span 8;
-}
+
+
+
 .hero-img img {
-  width: 100%;
   height: 100%;
-  display: block;
   padding: 0;
 }
+
+
 .copyrights {
   color: #fe142f;
   padding: 0;
@@ -500,33 +503,49 @@ footer {
 
 
 @media screen and (max-width: 800px) {
+  .hero-img{
+    width: 100%;
+    max-height:400px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .hero-img img{
+    width: 100%;
+    height: auto;
+  }
+
   .hero-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     box-shadow: unset;
+    height: auto;
+    
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 20px 0;
   }
   .hero-content::after {
     content: unset;
+    width: 100%;
   }
   .hero-content .btn-signup {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2rem;
+    font-weight: bold;
     white-space: normal;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    width: 100%;
   }
-  .hero-img img {
-    border-radius: 10px;
-    margin-top: 40px;
-  }
+
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
