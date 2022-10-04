@@ -6,7 +6,7 @@
   <title>Reservation</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style/modal.css" />
-  
+
 </head>
 
 <body>
@@ -52,7 +52,7 @@
 
     <div class="bground">
       <div class="content">
-        <span class="close"></span>
+        <span class="close closeBtnModal"></span>
         <div class="modal-body">
 
           <form class="formControl" id="FormLogin">
@@ -92,28 +92,58 @@
               </br>
               <span id='error'></span>
             </div>
-
+            <div class="formData">
             <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
 
-            <div>
-              <input type="radio" id="Tournoi" name="Tournoi" value="NewYork" checked>
-              <label for="Tournoi">New York</label>
-            </div>
+       
 
-            <div>
-              <input type="radio" id="Tournoi01" name="Tournoi" value="San francisco">
-              <label for="Tournoi">San francisco</label>
-            </div>
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi01" name="Tournoi" value="New York" checked/>
+                <label class="checkbox-label" for="Tournoi01">
+                  <span class="checkbox-icon"></span>
+                  New York</label>
+              </div>
 
-            <div>
-              <input type="radio" id="Tournoi03" name="Tournoi" value="Seattle">
-              <label for="Tournoi">Seattle</label>
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi02" name="Tournoi" value="San francisco" />
+                <label class="checkbox-label" for="Tournoi02">
+                  <span class="checkbox-icon"></span>
+                  San francisco</label>
+              </div>
+
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi03" name="Tournoi" value="Seattle" />
+                <label class="checkbox-label" for="Tournoi03">
+                  <span class="checkbox-icon"></span>
+                  Seattle</label>
+              </div>
+
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi04" name="Tournoi" value="Chicago" />
+                <label class="checkbox-label" for="Tournoi04">
+                  <span class="checkbox-icon"></span>
+                  Chicago</label>
+              </div>
+
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi05" name="Tournoi" value="Boston" />
+                <label class="checkbox-label" for="Tournoi05">
+                  <span class="checkbox-icon"></span>
+                  Boston</label>
+              </div>
+
+              <div>
+                <input class="checkbox-input" type="radio" id="Tournoi06" name="Tournoi" value="Portland" />
+                <label class="checkbox-label" for="Tournoi06">
+                  <span class="checkbox-icon"></span>
+                  Portland</label>
+              </div>
             </div>
 
             <div>
               <input class="checkbox-input" type="checkbox" id="condition" checked>
               <label class="checkbox2-label" for="condition">
-                <div class="checkbox-icon"  id='test'></div>
+                <div class="checkbox-icon" id='test'></div>
                 J'ai lu et accepté les conditions d'utilisation.
               </label>
               <span id='error'></span>
@@ -127,6 +157,7 @@
               </label>
               <span id='error'></span>
             </div>
+
 
             <button class="btn-submit button" type="submit">Valider</button>
           </form>

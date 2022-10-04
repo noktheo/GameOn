@@ -9,6 +9,7 @@ let condition = document.getElementById('condition');
 let event0 = document.getElementById('event');
 let tournoi00 = formLogin.elements['Tournoi'];
 
+
 const nomtableau = new Array();
 let y = 0;
 let compteur = 0;
@@ -19,14 +20,14 @@ formLogin.addEventListener('submit', e => {
     e.preventDefault();
     form_verify();
     console.log(nomtableau)
-    if (compteur == 7) {
+    if (compteur == 6) {
         console.log('sa roule');
     
+        closeModal();
     }
     
     compteur = 0;
 })
-
 
 
 // verify
@@ -141,7 +142,7 @@ function form_verify() {
     if (conditionValue == false) {
         let message = "abuse pas mec"
         setError(condition, message);
-        nomtableau[6] = "";
+        delete nomtableau[6];
       
     }
     else {
@@ -154,6 +155,7 @@ function form_verify() {
     if (eventValue == false) {
         let message = "abuse pas mec"
         setError(event0, message);
+        delete nomtableau[7];
     }
     else {
         y = 7;
