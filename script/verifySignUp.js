@@ -18,9 +18,10 @@ let compteur = 0;
 formLogin.addEventListener('submit', e => {
     e.preventDefault();
     form_verify();
-    if (compteur == 8) {
+    console.log(nomtableau)
+    if (compteur == 7) {
         console.log('sa roule');
-
+    
     }
     
     compteur = 0;
@@ -39,6 +40,8 @@ function form_verify() {
     const challenge = tournoi00.value;
     const conditionValue = condition.checked;
     const eventValue = event0.checked;
+
+    console.log(conditionValue);
     
  
 
@@ -130,14 +133,16 @@ function form_verify() {
     //input radio
     if (challenge !== null) {
         y = 5;
-        let value = 'dede';
-        setSuccess(tournoi00, value, y)
+        let value = challenge;
+        nomtableau[y] = value;
     }
 
     //condition verify
     if (conditionValue == false) {
         let message = "abuse pas mec"
         setError(condition, message);
+        nomtableau[6] = "";
+      
     }
     else {
         y = 6;
@@ -151,7 +156,7 @@ function form_verify() {
         setError(event0, message);
     }
     else {
-
+        y = 7;
         let value = eventValue;
         setSuccess(event0, value, y)
     }
@@ -174,7 +179,7 @@ function setError(elem, message) {
 function setSuccess(elem, value, y) {
     const formControl = elem.parentElement;
     const error = formControl.querySelector('span');
-
+    
     //suppréssion class alertInput
     elem.classList.remove("alertInput");
 
@@ -192,5 +197,5 @@ function setSuccess(elem, value, y) {
         compteur++
     }
 
-    console.log(nomtableau)
+  
 }
