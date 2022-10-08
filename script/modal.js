@@ -1,3 +1,6 @@
+let modalLogin01 = document.getElementById('modalContent');
+
+
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -13,7 +16,6 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalBtnClose = document.querySelectorAll('.closeBtnModal');
 
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -28,6 +30,21 @@ function launchModal() {
 //delte modal
 function closeModal() {
   modalbg.style.display = "none";
+}
+
+function resetModal(){
+  modalLogin01.classList.remove("modalAccepted");
+  modalLogin01.removeChild();
+}
+
+
+function loginValid () {
+  const textLoginAccepted = '<p class="textLoginAccepted" >Merci pour </br>votre inscription</p>';
+  const buttonLoginClose = ' <button class="btn-submit button">fermer</button>';
+  const ModalAccepted = textLoginAccepted + buttonLoginClose;
+  
+  modalLogin01.className += " modalAccepted";
+  modalLogin01.insertAdjacentHTML('afterbegin', ModalAccepted);
 }
 
 
