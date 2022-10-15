@@ -174,10 +174,6 @@ main {
   overflow: auto;
 }
 
-
-
-
-
 label {
   font-family: var(--font-default);
   font-size: 17px;

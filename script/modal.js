@@ -37,7 +37,7 @@ function resetModal(){
   modalLogin01.removeChild();
 }
 
-
+/**make modal valid login */
 function loginValid () {
   const textLoginAccepted = '<p class="textLoginAccepted" >Merci pour </br>votre inscription</p>';
   const buttonLoginClose = ' <button class="btn-submit button">fermer</button>';
@@ -47,4 +47,6 @@ function loginValid () {
   modalLogin01.insertAdjacentHTML('afterbegin', ModalAccepted);
 }
 
+
+/***component**/
 
