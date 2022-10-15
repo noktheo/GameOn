@@ -20,8 +20,10 @@ body {
 
   font-family: var(--font-default);
   font-size: 18px;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 p {
@@ -137,12 +139,6 @@ main {
   background: #3876ac;
 }
 
-.footer {
-
-  margin: 0 20px;
-  padding: 10px;
-  font-family: var(--font-slab);
-}
 
 /* Modal form */
 
@@ -447,10 +443,13 @@ input {
 
 /***footer***************************/
 footer {
-  margin-top: 50px;
-  padding-left: 2vw;
-  padding-right: 2vw;
   margin: 0 20px;
+  margin-bottom: 10px;
+}
+
+.tempalte{
+  display: block;
+
 }
 
 /**************modal***/
@@ -572,7 +571,7 @@ footer {
     font-weight: bold;
     white-space: normal;
   }
-  
+
   .hero-text {
     width: unset;
     font-size: 0.9rem;

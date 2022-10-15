@@ -47,6 +47,3 @@ function loginValid () {
   modalLogin01.insertAdjacentHTML('afterbegin', ModalAccepted);
 }
 
-
-/***component**/
-
