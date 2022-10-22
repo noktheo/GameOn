@@ -196,6 +196,14 @@ footer {
 }
 
 
+@media screen and (min-width: 1500px) {
+
+  .hero-img img {
+  height: 150%;
+  }
+
+}
+
 /******************************************/
 /****** under ***** 800px **************/
 @media screen and (max-width: 800px) {
