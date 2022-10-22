@@ -6,35 +6,49 @@
   <title>Reservation</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style/modal.css" />
+  <link rel="stylesheet" href="style/nav.css" />
+  <link rel="stylesheet" href="style/modalLogin.css" />
 
 </head>
 
 <body id="body">
 
-  <header class="topnav" id="myTopnav">
+  <header class="topnav">
 
     <div class="header-logo">
       <img alt="logo" src="media/Logo.png" width="auto" height="auto" />
     </div>
 
-    <nav class="main-navbar">
-
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a onclick="callLogin()" href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-      </div>
+    <nav class="navTopDesktop main-navbar">
+      <ul>
+        <li><a onclick="callLogin()" href="#">Détails de l’évènement</a></li>
+        <li><a href="#">À Propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Évènements passés</a></li>
+      </ul>
     </nav>
+
+    <nav class="navTopMobil">
+
+      <div class="burgerIcon" onclick="editNav()" id="burgerButton">
+        <span></span>
+      </div>
+
+      <ul id="eventNavMobil" class="navOff">
+        <li><a href="#">Détails de l’évènement</a></li>
+        <li><a href="#">À Propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Évènements passés</a></li>
+      </ul>
+
+    </nav>
+
   </header>
 
   <main>
 
 
-    <div class="hero-section">
+    <article class="hero-section">
 
       <div class="hero-content">
 
@@ -65,13 +79,20 @@
         je m'inscris
       </button>
       -->
-    </div>
+    </article>
 
     <div class="bground">
-      <div class="content">
-        <span class="close closeBtnModal"></span>
-        <div class="modal-body" id="modalContent">
 
+      <div class="content">
+
+        <span class="close closeBtnModal"></span>
+
+        <div id="modalValid" class="modalValidOff">
+          <p class="textLoginAccepted">Merci pour </br>votre inscription</p>
+          <button class="btn-submit button">fermer</button>
+        </div>
+
+        <div class="modal-body modalLoginOn" id="modalContent">
 
           <form class="formControl" id="FormLogin">
 
@@ -110,10 +131,9 @@
               </br>
               <span id='error'></span>
             </div>
+
             <div class="formData">
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-
-
 
               <div>
                 <input class="checkbox-input" type="radio" id="Tournoi01" name="Tournoi" value="New York" checked />
@@ -176,7 +196,6 @@
               <span id='error'></span>
             </div>
 
-
             <button class="btn-submit button" type="submit">Valider</button>
           </form>
 
@@ -189,9 +208,9 @@
       Copyright 2014 - 2022, GameOn Inc.
     </p>
   </footer>
-  <script src="component/modalLogin.js"></script>
   <script src="script/verifySignUp.js" async></script>
   <script src="script/modal.js"></script>
+  <script src="script/burgerIcon.js"></script>
 </body>
 
 </html>

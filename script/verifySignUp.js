@@ -22,8 +22,7 @@ formLogin.addEventListener('submit', e => {
     console.log(nomtableau)
     if (compteur == 6) {
         console.log('sa roule');
-
-        formLogin.remove();
+        formLogin.reset();
         loginValid();
     }
     

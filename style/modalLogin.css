@@ -1,0 +1,273 @@
+/**************modal***/
+
+/* Modal form */
+.bground {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+
+/* custom select end */
+.text-label {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/*bigbox*/
+.content {
+    margin: 5% auto;
+    min-height: 80vh;
+    width: 90%;
+    max-width: 500px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    z-index: 250;
+}
+
+/*bigbox anim*/
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+/*box*/
+  .modal-body {
+    padding: 15px 8%;
+    margin: 15px auto;
+    height: 100%;
+    min-height: 80vh;
+}
+  
+  /*modal accepted*/
+  /*box*/
+  .modalAccepted{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .formData{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .formData div{
+    margin-right: 10px;
+  }
+
+  /*input*/
+  label {
+    font-family: var(--font-default);
+    font-size: 17px;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 11px;
+  }
+  
+  input {
+    padding: 8px;
+    border: 0.8px solid #ccc;
+    outline: none;
+  }
+  
+  .text-control {
+    margin: 0;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 20px;
+    height: 48px;
+  }
+
+/**input checkbox*/
+/*checkbox style*/
+.checkbox-label,
+.checkbox2-label {
+  position: relative;
+  margin-left: 36px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+
+.checkbox-label .checkbox-icon,
+.checkbox2-label .checkbox-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #279e7a;
+  border-radius: 50%;
+  text-indent: 29px;
+  white-space: nowrap;
+  position: absolute;
+  left: -30px;
+  top: -1px;
+  transition: 0.3s;
+}
+
+.checkbox-label .checkbox-icon::after,
+.checkbox2-label .checkbox-icon::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-color: #279e7a;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-input:checked + .checkbox-label .checkbox-icon::after,
+.checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
+  opacity: 1;
+}
+
+.checkbox-input:checked + .checkbox2-label .checkbox-icon {
+  background: #279e7a;
+}
+
+.checkbox2-label .checkbox-icon {
+  border-radius: 4px;
+  border: 0;
+  background: #c4c4c4;
+}
+
+.checkbox2-label .checkbox-icon::after {
+  width: 7px;
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+  transform: rotate(-55deg);
+  left: 21%;
+  top: 19%;
+}
+  
+
+  /*alert*/
+  #error {
+    color: rgb(247, 60, 60);
+    font-size: 10px;
+  }
+  
+  .alertInput {
+    animation-duration: 4s;
+    animation-name: alertInputRed;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    background-color: white;
+  }
+
+/*alert anim*/
+@keyframes alertInputRed {
+    0% {
+        background-color: white;
+    }
+  
+    50% {
+        background-color: rgb(253, 103, 103);
+    }
+  
+    100% {
+        background-color: white;
+    }
+  }
+
+/** close button**/
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(0.7);
+  }
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 3px;
+    background-color: #fff;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+  /***button submit / signUp**/
+
+.btn-submit, .btn-signup {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+/*****modal accepted********/
+
+.modalValidOff{
+  display: none;
+  height: 100%;
+
+  flex-direction: column;
+}
+
+.modalValidOn{
+  display: flex;
+  
+}
+
+.modalLoginOff{
+  display: none;
+}
+
+/*login accepted*/
+.textLoginAccepted{
+  margin: auto;
+  text-align: center;
+}
+  

@@ -1,20 +1,14 @@
 let modalLogin01 = document.getElementById('modalContent');
 
 
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalBtnClose = document.querySelectorAll('.closeBtnModal');
+
+const modalValid = document.getElementById("modalValid");
+const modalLogin = document.getElementById("modalContent");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -25,25 +19,24 @@ modalBtnClose.forEach((btn) => btn.addEventListener("click", closeModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  modalValid.className = "modalValidOff";
 }
 
 //delte modal
 function closeModal() {
   modalbg.style.display = "none";
+  modalLogin.classList.remove("modalLoginOff");
 }
 
-function resetModal(){
-  modalLogin01.classList.remove("modalAccepted");
-  modalLogin01.removeChild();
-}
 
 /**make modal valid login */
 function loginValid () {
-  const textLoginAccepted = '<p class="textLoginAccepted" >Merci pour </br>votre inscription</p>';
-  const buttonLoginClose = ' <button class="btn-submit button">fermer</button>';
-  const ModalAccepted = textLoginAccepted + buttonLoginClose;
-  
-  modalLogin01.className += " modalAccepted";
-  modalLogin01.insertAdjacentHTML('afterbegin', ModalAccepted);
+  if (modalValid.className === "modalValidOff") {
+    modalValid.className += " modalValidOn";
+    modalLogin.className += " modalLoginOff";
+  }
+  else {
+    modalValid.className = "modalValidOff";
+    modalLogin.classList.remove("modalLoginOff");
+  }
 }
-
