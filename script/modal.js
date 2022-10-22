@@ -10,10 +10,10 @@ const modalBtnClose = document.querySelectorAll('.closeBtnModal');
 const modalValid = document.getElementById("modalValid");
 const modalLogin = document.getElementById("modalContent");
 
-// launch modal event
+// event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// close modal event
+// event
 modalBtnClose.forEach((btn) => btn.addEventListener("click", closeModal));
 
 // launch modal form
@@ -22,14 +22,14 @@ function launchModal() {
   modalValid.className = "modalValidOff";
 }
 
-//delte modal
+//close modal
 function closeModal() {
   modalbg.style.display = "none";
   modalLogin.classList.remove("modalLoginOff");
 }
 
 
-/**make modal valid login */
+/**launch modal valid login */
 function loginValid () {
   if (modalValid.className === "modalValidOff") {
     modalValid.className += " modalValidOn";
