@@ -10,6 +10,7 @@
   height: 100%;
   width: 100%;
   overflow: auto;
+  background-color: white;
 }
 
 
@@ -69,7 +70,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 20px 0;
+    margin: 15px 0;
   }
   
   .formData div{
@@ -79,7 +80,7 @@
   /*input*/
   label {
     font-family: var(--font-default);
-    font-size: 17px;
+    font-size: 14px;
     font-weight: normal;
     display: inline-block;
     margin-bottom: 11px;
@@ -97,7 +98,7 @@
     width: 100%;
     border-radius: 8px;
     font-size: 20px;
-    height: 48px;
+    height: 45px;
   }
 
 /**input checkbox*/
@@ -272,6 +273,13 @@
 .textLoginAccepted{
   margin: auto;
   text-align: center;
+}
+
+/**********************************/
+@media screen and (max-width: 540px) {
+.bground{
+  background-color: transparent;
+}
 }
 
 

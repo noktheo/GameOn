@@ -77,7 +77,7 @@ function form_verify() {
     }
 
     else if (!lastValue.match(/^[a-zA-Z]*$/i)) {
-        let message = "Nom doit commencer par une lettre";
+        let message = "Nom doit contenir de lettre";
         setError(lastName, message)
     }
     else {
@@ -153,7 +153,7 @@ function form_verify() {
 
     //condition event
     if (eventValue == false) {
-        let message = "abuse pas mec"
+        let message = " "
         setError(event0, message);
         delete nomtableau[7];
     }
