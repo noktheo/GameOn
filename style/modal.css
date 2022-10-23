@@ -277,9 +277,9 @@ footer {
     width: 100%;
   }
 
-  .hero-section > .btn-signup {
-    margin-top: 50px !important;
+  .hero-section > .btn-signupMobil {
     display: block;
+    margin: 50px auto 0 auto !important;
 
   }
 
