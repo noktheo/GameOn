@@ -15,10 +15,12 @@
 
   <header class="topnav">
 
+    <!--logotype-->
     <div class="header-logo">
       <img alt="logo" src="media/Logo.png" width="auto" height="auto" />
     </div>
 
+    <!--nav desktop-->
     <nav class="navTopDesktop main-navbar">
       <ul>
         <li><a onclick="callLogin()" href="#">Détails de l’évènement</a></li>
@@ -28,8 +30,8 @@
       </ul>
     </nav>
 
+    <!--nav mobil-->
     <nav class="navTopMobil">
-
       <div class="burgerIcon" onclick="editNav()" id="burgerButton">
         <span></span>
       </div>
@@ -40,7 +42,6 @@
         <li><a href="#">Contact</a></li>
         <li><a href="#">Évènements passés</a></li>
       </ul>
-
     </nav>
 
   </header>
@@ -60,6 +61,7 @@
           aux réservations... Places limitées !
         </p>
 
+        <!--button sign-up upper 800px-->
         <button class="btn-signup modal-btn">
           je m'inscris
         </button>
@@ -69,26 +71,35 @@
         <img src="media/bg_img.jpg" alt="img" />
       </div>
 
+      <!--button sign-up under 800px-->
       <button class="btn-signup btn-signupMobil btn-signup modal-btn">
         je m'inscris
       </button>
     </article>
 
+    <!--background modal login-->
     <div class="bground">
 
+      <!--box modal form login-->
       <div class="content">
 
+        <!--icon close-->
         <span class="close closeBtnModal"></span>
 
+        <!--form accepted-->
         <div id="modalValid" class="modalValidOff">
           <p class="textLoginAccepted">Merci pour </br>votre inscription</p>
-          <button class="btn-submit button">fermer</button>
+
+          <!--button close-->
+          <button class="btn-submit button closeBtnModal">fermer</button>
         </div>
 
+        <!--form login-->
         <div class="modal-body modalLoginOn" id="modalContent">
 
           <form class="formControl" id="FormLogin">
 
+            <!--First Name-->
             <div class="formData">
               <label for="userName">Prénom</label>
               <input class="text-control" type="text" name="userName" id='userName'>
@@ -96,6 +107,7 @@
               <span id='error'></span>
             </div>
 
+            <!--Name-->
             <div class="formData">
               <label for="lastName">Nom</label>
               <input class="text-control" type="text" name="lastName" id='lastName'>
@@ -103,6 +115,7 @@
               <span id='error'></span>
             </div>
 
+            <!--email-->
             <div class="formData">
               <label for="mail">Email</label>
               <input class="text-control" type="email" name="mail" id='mail'>
@@ -110,14 +123,15 @@
               <span id='error'></span>
             </div>
 
+            <!--birthday-->
             <div class="form-control ">
               <label for="date">Date de naissance</label>
               <input class="text-control" type="date" name="date" id='date' max="2023-01-01">
               </br>
               <span id='error'></span>
-
             </div>
 
+            <!--input how many-->
             <div class="form-control ">
               <label for="numberT">Combien de tournois ?</label>
               <input class="text-control" type="number" name="numberT" id='numberT' value="0">
@@ -125,6 +139,7 @@
               <span id='error'></span>
             </div>
 
+            <!--checkbox next tournoi-->
             <div class="formData">
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
 
@@ -171,6 +186,7 @@
               </div>
             </div>
 
+            <!--input condition-->
             <div>
               <input class="checkbox-input" type="checkbox" id="condition" checked>
               <label class="checkbox2-label" for="condition">
@@ -180,6 +196,7 @@
               <span id='error'></span>
             </div>
 
+            <!--input event-->
             <div>
               <input class="checkbox-input" type="checkbox" id="event">
               <label class="checkbox2-label" for="event">
@@ -189,6 +206,7 @@
               <span id='error'></span>
             </div>
 
+            <!--button submit-->
             <button class="btn-submit button" type="submit">Valider</button>
           </form>
 
@@ -196,11 +214,13 @@
       </div>
     </div>
   </main>
+
   <footer>
     <p class="copyrights">
       Copyright 2014 - 2022, GameOn Inc.
     </p>
   </footer>
+
   <script src="script/verifySignUp.js" async></script>
   <script src="script/modal.js"></script>
   <script src="script/burgerIcon.js"></script>

@@ -23,7 +23,6 @@
 /*bigbox*/
 .content {
     margin: 5% auto;
-    min-height: 80vh;
     width: 90%;
     max-width: 500px;
     animation-name: modalopen;
