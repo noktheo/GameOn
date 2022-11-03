@@ -44,6 +44,8 @@ img {
   background-color: white;
   justify-content: space-between;
   padding: 20px 3.5vw;
+  margin: auto;
+  max-width: 1600px;
   position: fixed;
   z-index: 100;
 }
