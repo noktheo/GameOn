@@ -13,7 +13,6 @@ function editNav() {
 
 
 // anim
-
 (function () {
 
     const burgerButton = document.getElementById("burgerButton");
@@ -22,4 +21,4 @@ function editNav() {
         burgerButton.classList.toggle("open");
     })
   
-  })();
+})();

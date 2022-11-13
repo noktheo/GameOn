@@ -30,7 +30,7 @@ function closeModal() {
 
 
 /**launch modal valid login */
-function loginValid () {
+function openModalValid () {
   if (modalValid.className === "modalValidOff") {
     modalValid.className += " modalValidOn";
     modalLogin.className += " modalLoginOff";

@@ -23,9 +23,9 @@ formLogin.addEventListener('submit', e => {
     if (compteur == 6) {
         console.log('sa roule');
         formLogin.reset();
-        loginValid();
+        openModalValid();
     }
-    
+
     compteur = 0;
 })
 
@@ -43,55 +43,51 @@ function form_verify() {
     const eventValue = event0.checked;
 
     console.log(conditionValue);
-    
- 
+
+    // Regexp
+    const accentedCharacters = "àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ";
+    const emailRegexp = '^[a-z' + accentedCharacters + ']*$';
+    const emailLastName = '^[a-zA-Z' + accentedCharacters + ']*$'
 
     // userName verify
     if (userValue === "") {
         let message = "Prénom ne peut pas être vide";
         setError(userName, message);
     }
-
-    else if (!userValue.match(/^[a-z]*$/i)) {
+    else if (!userValue.match(emailRegexp)) {
         let message = "Prénom doit contenir une lettre";
         setError(userName, message)
     }
-
-    else {
-        let letterNum = userValue.length;
-        if (letterNum < 3) {
-            let message = "Prénom doit avoir au moins 3 caractères";
-            setError(userName, message)
-        }
-        else {
-            y = 0;
-            let value = userValue;
-            setSuccess(userName, value, y);
-        }
+    else if (userValue.length < 3) {
+        let message = "Prénom doit avoir au moins 3 caractères";
+        setError(userName, message)
     }
+    else {
+        y = 0;
+        let value = userValue;
+        setSuccess(userName, value, y);
+    }
+
 
     // lastName verify
     if (lastValue === "") {
         let message = "Nom ne peut pas être vide";
         setError(lastName, message);
     }
-
-    else if (!lastValue.match(/^[a-zA-Z]*$/i)) {
+    else if (!lastValue.match(emailLastName)) {
         let message = "Nom doit contenir de lettre";
         setError(lastName, message)
     }
-    else {
-        let letterNum = lastValue.length;
-        if (letterNum < 3) {
-            let message = "Nom doit avoir au moins 3 caractères";
-            setError(lastName, message)
-        }
-        else {
-            y = 1;
-            let value = lastValue;
-            setSuccess(lastName, value, y);
-        }
+    else if (lastValue.length < 3) {
+        let message = "Nom doit avoir au moins 3 caractères";
+        setError(lastName, message)
     }
+    else {
+        y = 1;
+        let value = lastValue;
+        setSuccess(lastName, value, y);
+    }
+
 
     // email verify
     if (emailValue === "") {
@@ -143,7 +139,7 @@ function form_verify() {
         let message = "abuse pas mec"
         setError(condition, message);
         delete nomtableau[6];
-      
+
     }
     else {
         y = 6;
@@ -174,14 +170,13 @@ function setError(elem, message) {
 
     // Ajout du message d'erreur
     error.innerText = message
-
 }
 
 //succes formulaire
 function setSuccess(elem, value, y) {
     const formControl = elem.parentElement;
     const error = formControl.querySelector('span');
-    
+
     //suppréssion class alertInput
     elem.classList.remove("alertInput");
 
@@ -199,5 +194,5 @@ function setSuccess(elem, value, y) {
         compteur++
     }
 
-  
+
 }
